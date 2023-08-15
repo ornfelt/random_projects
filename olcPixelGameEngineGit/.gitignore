@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/utilities/olcUTIL_AffineView.h
+/utilities/olcUTIL_Maths.h

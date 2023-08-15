@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Required elements-->
+    <id>Klarna.Rest.Core</id>
+    <version>$version$</version>
+    <description>.NET SDK library for Klarna Services</description>
+    <authors>klarna</authors>
+    <!-- Optional elements -->
+    <title>Klarna REST .NET SDK</title>
+    <owners>klarna</owners>
+    <license type="expression">Apache-2.0</license>
+    <projectUrl>https://github.com/klarna/kco_rest_dotnet.git</projectUrl>
+    <iconUrl>https://cdn.klarna.com/1.0/shared/image/generic/logo/en_gb/basic/logo_black.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <copyright>Copyright 2018 - 2019 Klarna AB</copyright>
+    <tags>Klarna Checkout Payments SDK REST Integration library</tags>
+
+    <dependencies>
+      <group>
+        <dependency id="Newtonsoft.Json" version="11.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
