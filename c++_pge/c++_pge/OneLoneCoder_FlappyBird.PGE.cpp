@@ -178,11 +178,20 @@ protected:
             int nUp = (int)(fBirdPosition +  0);
             int nDn = (int)(fBirdPosition + 16);
             // check against screen boundaries and against non black pixels
-            bHasCollided = fBirdPosition < 16 || fBirdPosition > ScreenHeight() - 16 ||
-                    screenSprite->GetPixel( nLt, nUp ) != olc::BLACK ||
-                    screenSprite->GetPixel( nLt, nDn ) != olc::BLACK ||
-                    screenSprite->GetPixel( nRt, nUp ) != olc::BLACK ||
-                    screenSprite->GetPixel( nRt, nDn ) != olc::BLACK ;
+			olc::Pixel ltup = screenSprite->GetPixel(nLt, nUp);
+			olc::Pixel ltdn = screenSprite->GetPixel(nLt, nDn);
+			olc::Pixel rtup = screenSprite->GetPixel(nRt, nUp);
+			olc::Pixel rtdn = screenSprite->GetPixel(nRt, nDn);
+            //bHasCollided = fBirdPosition < 16 || fBirdPosition > ScreenHeight() - 16 ||
+            //        screenSprite->GetPixel( nLt, nUp ) != olc::BLACK ||
+            //        screenSprite->GetPixel( nLt, nDn ). != olc::BLACK ||
+            //        screenSprite->GetPixel( nRt, nUp ) != olc::BLACK ||
+            //        screenSprite->GetPixel( nRt, nDn ) != olc::BLACK ;
+			bHasCollided = fBirdPosition < 16 || fBirdPosition > ScreenHeight() - 16 ||
+				(ltup.r != olc::BLACK.r && ltup.g != olc::BLACK.g && ltup.b != olc::BLACK.b) ||
+				(ltdn.r != olc::BLACK.r && ltdn.g != olc::BLACK.g && ltdn.b != olc::BLACK.b) ||
+				(rtup.r != olc::BLACK.r && rtup.g != olc::BLACK.g && rtup.b != olc::BLACK.b) ||
+				(rtdn.r != olc::BLACK.r && rtdn.g != olc::BLACK.g && rtdn.b != olc::BLACK.b);
 
 			// Draw Bird
 			if (fBirdVelocity > 0)

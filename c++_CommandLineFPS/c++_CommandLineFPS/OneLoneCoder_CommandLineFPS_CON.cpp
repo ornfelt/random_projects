@@ -92,7 +92,8 @@ float fFOV = 3.14159f / 4.0f;	// Field of View
 float fDepth = 16.0f;			// Maximum rendering distance
 float fSpeed = 5.0f;			// Walking Speed
 
-int main()
+//int main()
+int main_old()
 {
 	// Create Screen Buffer
 	wchar_t *screen = new wchar_t[nScreenWidth*nScreenHeight];

@@ -395,6 +395,7 @@ protected:
 };
 
 int main()
+//int main_old()
 {
 	OneLoneCoder_UltimateFPS game;
 	game.ConstructConsole(320, 200,4,4);

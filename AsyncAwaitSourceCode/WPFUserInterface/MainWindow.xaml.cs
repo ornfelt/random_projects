@@ -49,10 +49,10 @@ namespace WPFUserInterface
 
             output.Add("https://www.yahoo.com");
             output.Add("https://www.google.com");
-            output.Add("https://www.microsoft.com");
             output.Add("https://www.cnn.com");
             output.Add("https://www.codeproject.com");
-            output.Add("https://www.stackoverflow.com");
+            //output.Add("https://www.microsoft.com");
+            //output.Add("https://www.stackoverflow.com");
 
             return output;
         }
@@ -93,6 +93,7 @@ namespace WPFUserInterface
             foreach (string site in websites)
             {
                 WebsiteDataModel results = DownloadWebsite(site);
+                Console.WriteLine("Downloaded site: " + site);
                 ReportWebsiteInfo(results);
             }
         }

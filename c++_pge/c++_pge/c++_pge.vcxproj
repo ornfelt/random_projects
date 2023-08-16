@@ -150,7 +150,7 @@
     <ClInclude Include="olcPixelGameEngine.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OneLoneCoder_PathFinding_AStar.PGE.cpp" />
+    <ClCompile Include="OneLoneCoder_PlatformGame1.PGE.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

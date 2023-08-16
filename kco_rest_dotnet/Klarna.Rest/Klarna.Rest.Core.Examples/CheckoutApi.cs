@@ -17,7 +17,8 @@ namespace Klarna.Rest.Core.Examples
         /// Remember to replace username and password with valid Klarna credentials. 
         /// </summary>
         //public static void Main()
-        public static void OldCreate()
+        //public static void OldCreate()
+        public static String OldCreate()
         {
             //var username = "0_abc";
             var username = "PK52760_e9fd580e033a";
@@ -75,6 +76,7 @@ namespace Klarna.Rest.Core.Examples
                 var createdOrder = client.Checkout.CreateOrder(order).Result;
                 var orderId = createdOrder.OrderId;
                 Console.WriteLine($"Order ID: {orderId}");
+                return orderId;
             }
             catch (AggregateException ae)
             {
@@ -92,6 +94,7 @@ namespace Klarna.Rest.Core.Examples
                     }
                 }
             }
+            return "0";
         }
     }
 
@@ -189,11 +192,12 @@ namespace Klarna.Rest.Core.Examples
         public static void Main()
         //public static void Old2()
         {
-            CreateExample.OldCreate();
+            //CreateExample.OldCreate();
+            var orderId = CreateExample.OldCreate();
             var username = "PK52760_e9fd580e033a";
             var password = "TC1KwODjPpwpFRPj";
             //var orderId = "85dae756-a98d-6248-9a9f-1b4a93c0d095";
-            var orderId = "8b675da7-aa4e-4334-82b5-99abd7b3d77b";
+            //var orderId = "8b675da7-aa4e-4334-82b5-99abd7b3d77b";
             
             Console.WriteLine("TEXTX");
 

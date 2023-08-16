@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OneLoneCoder_PathFinding_AStar.PGE.cpp">
+    <ClCompile Include="OneLoneCoder_PlatformGame1.PGE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

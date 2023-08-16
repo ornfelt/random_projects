@@ -57,7 +57,8 @@ public:
 		// 28x2 unique characters, each character contains 8 animations of 3
 		// frames each. Each frame is 26x36 pixels
 		//gfxAll.Load("./assets/MegaSprite1.png");
-		gfxAll.Load("C:\\local\\sprite.png");
+		//gfxAll.Load("C:\\local\\sprite.png");
+		gfxAll.Load("./sprite.png");
 
 		// Thats A LOT of individual graphics, but they all follow a similar pattern
 		// because the asset was created usefully (take note certain popular asset creators)
